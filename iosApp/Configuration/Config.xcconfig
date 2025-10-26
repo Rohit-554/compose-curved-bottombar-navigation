@@ -1,0 +1,7 @@
+TEAM_ID=
+
+PRODUCT_NAME=compose-curved-bottom-navigation
+PRODUCT_BUNDLE_IDENTIFIER=io.jadu.compose-curved-bottom-navigation$(TEAM_ID)
+
+CURRENT_PROJECT_VERSION=1
+MARKETING_VERSION=1.0
