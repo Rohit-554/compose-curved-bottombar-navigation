@@ -6,7 +6,11 @@
 
 A highly customizable Curved Bottom Navigation bar for Jetpack Compose, built with Kotlin Multiplatform to support both Android and iOS.
 
-![Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2JwajV0amVzY3g3ZTFicmw2Z3R4cnFsd3g1ODR6M3pzMXJtZThzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Lnjqt0f1Ar6ol1h2D2/giphy.gif) 
+# Preview
+https://github.com/user-attachments/assets/2c3ca053-d97b-4195-8c4d-d97ad9871235
+
+
+
 
 ## ✨ Features
 
@@ -16,7 +20,7 @@ A highly customizable Curved Bottom Navigation bar for Jetpack Compose, built wi
 - **Three Curve Animation Styles**: Choose from `SMOOTH`, `DYNAMIC`, or `BOUNCY` animations.
 - **Easy to Use**: Simple integration with just a few lines of code.
 
-## 📦 Installation
+## Installation
 
 This project is not yet available as a library. This feature is **coming soon**!
 
@@ -144,3 +148,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+<p align="center">Built with love ❤️ by <b>Jadu</b></p>
