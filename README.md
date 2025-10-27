@@ -1,6 +1,6 @@
 # Compose Curved Bottom Navigation
 
-[![Kotlin](https://img.shields.io/badge/Kotlin-1.9.22-blue.svg?style=flat-square)](http://kotlinlang.org)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.2.20-blue.svg?style=flat-square)](http://kotlinlang.org)
 [![Compose Multiplatform](https://img.shields.io/badge/Compose-Multiplatform-brightgreen.svg?style=flat-square)](https://www.jetbrains.com/lp/compose-multiplatform/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
