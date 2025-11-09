@@ -41,6 +41,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.jadu.animatedBottomBar.models.CurveAnimationType
 import io.jadu.animatedBottomBar.models.NavItem
+import io.jadu.animatedBottomBar.util.RenderIcon
 import kotlinx.coroutines.launch
 
 /**
@@ -241,8 +242,8 @@ private fun CurvedBottomNavigationContent(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
-                Icon(
-                    imageVector = items[currentIndex].selectedIcon
+                RenderIcon(
+                    iconSource = items[currentIndex].selectedIcon
                         ?: items[currentIndex].icon,
                     contentDescription = null,
                     tint = fabIconTint,

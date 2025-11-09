@@ -18,39 +18,40 @@ import androidx.compose.material.icons.outlined.Person3
 import androidx.compose.material.icons.outlined.Person4
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.SentimentVerySatisfied
+import io.jadu.animatedBottomBar.models.IconSource
 import io.jadu.animatedBottomBar.models.NavItem
 
 val navItems = listOf(
     NavItem(
-        icon = Icons.Outlined.Home,
-        selectedIcon = Icons.Filled.Home,
+        icon = IconSource.Vector(Icons.Outlined.Home),
+        selectedIcon = IconSource.Vector(Icons.Filled.Home),
         label = "Home",
         route = "home"
     ),
     NavItem(
-        icon = Icons.Outlined.Search,
-        selectedIcon = Icons.Filled.Search,
+        icon = IconSource.Vector(Icons.Outlined.Search),
+        selectedIcon = IconSource.Vector(Icons.Filled.Search),
         label = "Search",
         route = "search"
     ),
     NavItem(
-        icon = Icons.Outlined.Camera,
-        selectedIcon = Icons.Filled.Camera,
+        icon = IconSource.Vector(Icons.Outlined.Camera),
+        selectedIcon = IconSource.Vector(Icons.Filled.Camera),
         label = "Moments",
         route = "favorites",
-        badgeCount = 5  // Show "5" badge
+        badgeCount = 5
     ),
     NavItem(
-        icon = Icons.Outlined.SentimentVerySatisfied,
-        selectedIcon = Icons.Filled.SentimentVerySatisfied,
+        icon = IconSource.Vector(Icons.Outlined.SentimentVerySatisfied),
+        selectedIcon = IconSource.Vector(Icons.Filled.SentimentVerySatisfied),
         label = "Friends",
         route = "savedFriends"
     ),
     NavItem(
-        icon = Icons.Outlined.Person4,
-        selectedIcon = Icons.Filled.Person4,
+        icon = IconSource.Vector(Icons.Outlined.Person4),
+        selectedIcon = IconSource.Vector(Icons.Filled.Person4),
         label = "Person",
         route = "person",
-        badgeCount = 5  // Show "5" badge
+        badgeCount = 5
     ),
 )

@@ -20,8 +20,11 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import io.jadu.animatedBottomBar.models.IconSource
 import io.jadu.animatedBottomBar.models.NavItem
+import io.jadu.animatedBottomBar.util.RenderIcon
 import io.jadu.animatedBottomBar.util.bounceClickable
+import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun BottomNavItem(
@@ -55,8 +58,8 @@ fun BottomNavItem(
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Icon(
-                        imageVector = item.icon,
+                    RenderIcon(
+                        iconSource = item.icon,
                         contentDescription = item.label,
                         tint = iconTint,
                         modifier = Modifier.size(iconSize)
