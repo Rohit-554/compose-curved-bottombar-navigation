@@ -1,5 +1,6 @@
 # Compose Curved Bottom Navigation
 
+[![Version](https://img.shields.io/badge/Version-1.2-brightgreen.svg?style=flat-square)](https://github.com/user-attachments/assets/2c3ca053-d97b-4195-8c4d-d97ad9871235)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.2.20-blue.svg?style=flat-square)](http://kotlinlang.org)
 [![Compose Multiplatform](https://img.shields.io/badge/Compose-Multiplatform-brightgreen.svg?style=flat-square)](https://www.jetbrains.com/lp/compose-multiplatform/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
@@ -32,23 +33,44 @@ In the meantime, you can use it by following these steps:
 
 ## Usage
 
-First, define your navigation items. Each `NavItem` represents a screen or destination in your app.
+First, define your navigation items. Each `NavItem` now requires icons wrapped in `IconSource`.
 
 ```kotlin
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.outlined.*
+import io.jadu.animatedBottomBar.models.IconSource
+import io.jadu.animatedBottomBar.models.NavItem
+
 val navItems = listOf(
     NavItem(
+        icon = IconSource.Vector(Icons.Outlined.Home),
+        selectedIcon = IconSource.Vector(Icons.Filled.Home),
         label = "Home",
-        icon = Icons.Outlined.Home,
-        selectedIcon = Icons.Filled.Home
+        route = "home"
     ),
     NavItem(
+        icon = IconSource.Vector(Icons.Outlined.Search),
+        selectedIcon = IconSource.Vector(Icons.Filled.Search),
         label = "Search",
-        icon = Icons.Outlined.Search,
-        selectedIcon = Icons.Filled.Search
+        route = "search"
+    ),
+    NavItem(
+        icon = IconSource.Drawable(R.drawable.ic_custom),
+        selectedIcon = IconSource.Drawable(R.drawable.ic_custom_filled),
+        label = "Custom",
+        route = "custom"
     ),
     // ... more items
 )
 ```
+
+### Icon Sources
+
+`NavItem` now supports two types of icon sources:
+
+- **`IconSource.Vector`**: Use Material Icons or custom `ImageVector`
+- **`IconSource.Drawable`**: Use drawable resources from your project
 
 Then, add the `CurvedBottomNavigation` composable to your UI. It works well within a `Scaffold`:
 
