@@ -11,6 +11,25 @@ A highly customizable Curved Bottom Navigation bar for Jetpack Compose, built wi
 https://github.com/user-attachments/assets/2c3ca053-d97b-4195-8c4d-d97ad9871235
 
 
+# When Edge to Edge enabled
+- Set The surface to cover the transparent navigation bar (systemBar) with the navigation bar color
+
+
+```
+        setContent {
+            Surface(
+                color = Color(0xffEEE9FF)
+            ) {
+                App()
+            }
+        }
+```
+
+- give it a navigationBarsPadding, so that it doesn't interfere with the system bars
+```
+   CurvedBottomNavigation(
+                modifier = Modifier.align(Alignment.BottomCenter).navigationBarsPadding(),
+```
 
 
 ## ✨ Features
