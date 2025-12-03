@@ -1,6 +1,6 @@
 # Compose Curved Bottom Navigation
 
-[![Version](https://img.shields.io/badge/Version-1.2-brightgreen.svg?style=flat-square)](https://github.com/user-attachments/assets/2c3ca053-d97b-4195-8c4d-d97ad9871235)
+[![Version](https://img.shields.io/badge/Version-1.1-brightgreen.svg?style=flat-square)](https://github.com/user-attachments/assets/2c3ca053-d97b-4195-8c4d-d97ad9871235)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.2.20-blue.svg?style=flat-square)](http://kotlinlang.org)
 [![Compose Multiplatform](https://img.shields.io/badge/Compose-Multiplatform-brightgreen.svg?style=flat-square)](https://www.jetbrains.com/lp/compose-multiplatform/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
@@ -111,6 +111,11 @@ Scaffold(
     SampleScreens(currentIndex = selectedIndex)
 }
 ```
+
+### Navigation Integration Example
+
+For more complex apps with navigation, you can integrate with Jetpack Navigation Compose:
+
 
 ## Customization
 
