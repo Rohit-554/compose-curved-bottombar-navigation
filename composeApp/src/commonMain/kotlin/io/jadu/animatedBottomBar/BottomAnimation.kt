@@ -23,7 +23,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
-import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -173,6 +172,14 @@ private fun CurvedBottomNavigationContent(
     val haptic = LocalHapticFeedback.current
     var currentIndex by remember { mutableStateOf(selectedIndex) }
     var previousIndex by remember { mutableStateOf(selectedIndex) }
+
+    // Sync currentIndex with selectedIndex when it changes from outside (e.g., navigation)
+    LaunchedEffect(selectedIndex) {
+        if (selectedIndex != currentIndex) {
+            previousIndex = currentIndex
+            currentIndex = selectedIndex
+        }
+    }
 
     val screenWidth = componentWidth
     val cellWidth = screenWidth / items.size
