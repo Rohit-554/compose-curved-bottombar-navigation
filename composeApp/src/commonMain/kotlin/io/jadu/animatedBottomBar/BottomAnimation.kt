@@ -181,8 +181,7 @@ private fun CurvedBottomNavigationContent(
         }
     }
 
-    val screenWidth = componentWidth
-    val cellWidth = screenWidth / items.size
+    val cellWidth = componentWidth / items.size
 
     val startX = cellWidth * previousIndex + (cellWidth / 2) - (fabSize / 2)
     val endX = cellWidth * currentIndex + (cellWidth / 2) - (fabSize / 2)
@@ -191,12 +190,15 @@ private fun CurvedBottomNavigationContent(
     val fabY = remember { Animatable(-35f) }
     val iconScale = remember { Animatable(1f) }
 
+    // Track which icon is shown inside FAB, separate from currentIndex
+    var displayedIconIndex by remember { mutableStateOf(currentIndex) }
+
     LaunchedEffect(currentIndex) {
         if (currentIndex != previousIndex) {
             val startXValue = startX.value
             val endXValue = endX.value
             val distance = endXValue - startXValue
-
+            var iconSwitched = false
             launch {
                 fabX.animateTo(
                     targetValue = endXValue,
@@ -208,6 +210,12 @@ private fun CurvedBottomNavigationContent(
                         0f
                     }
 
+                    // Switch the FAB icon after ~30% progression to avoid icon-first change
+                    if (!iconSwitched && progress >= 0.3f) {
+                        displayedIconIndex = currentIndex
+                        iconSwitched = true
+                    }
+
                     val curveHeight = 40f
                     val parabolicY = -4f * progress * (progress - 1f)
                     val targetY = -30f + curveHeight * parabolicY
@@ -215,6 +223,11 @@ private fun CurvedBottomNavigationContent(
                     launch {
                         fabY.snapTo(targetY)
                     }
+                }
+                // Ensure icon is updated at the end if progress never reached threshold
+                if (!iconSwitched) {
+                    displayedIconIndex = currentIndex
+                    iconSwitched = true
                 }
             }
         }
@@ -250,8 +263,9 @@ private fun CurvedBottomNavigationContent(
                 verticalArrangement = Arrangement.Center
             ) {
                 RenderIcon(
-                    iconSource = items[currentIndex].selectedIcon
-                        ?: items[currentIndex].icon,
+                    // Use displayedIconIndex so icon switches in sync with FAB movement
+                    iconSource = items[displayedIconIndex].selectedIcon
+                        ?: items[displayedIconIndex].icon,
                     contentDescription = null,
                     tint = fabIconTint,
                     modifier = Modifier.size(if(enableFabIconScale)(fabIconSize.value * iconScale.value).dp else fabIconSize)
