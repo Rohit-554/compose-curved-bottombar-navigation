@@ -12,8 +12,7 @@ A highly customizable Curved Bottom Navigation bar for Jetpack Compose, built wi
 https://github.com/user-attachments/assets/2c3ca053-d97b-4195-8c4d-d97ad9871235
 
 # Caution ⚠️
-The Animation will not work properly in `low end devices` with `less GPU`, fix is coming soon
-
+The Animation will feel `slow` in debug mode, try release build
 
 # When Edge to Edge enabled - [Full Navigation Example](https://github.com/Rohit-554/compose-curved-bottombar-navigation/tree/master/composeApp/src/commonMain/kotlin/io/jadu/sample)
 - Set The surface to cover the transparent navigation bar (systemBar) with the navigation bar color
