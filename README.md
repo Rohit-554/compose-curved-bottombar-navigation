@@ -1,8 +1,9 @@
 # Compose Curved Bottom Navigation
 
-[![Version](https://img.shields.io/badge/Version-1.1-brightgreen.svg?style=flat-square)](https://github.com/user-attachments/assets/2c3ca053-d97b-4195-8c4d-d97ad9871235)
+[![Version](https://img.shields.io/badge/Version-2.0-brightgreen.svg?style=flat-square)](https://github.com/user-attachments/assets/2c3ca053-d97b-4195-8c4d-d97ad9871235)
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.2.20-blue.svg?style=flat-square)](http://kotlinlang.org)
 [![Compose Multiplatform](https://img.shields.io/badge/Compose-Multiplatform-brightgreen.svg?style=flat-square)](https://www.jetbrains.com/lp/compose-multiplatform/)
+[![Compose Navigation](https://img.shields.io/badge/Compose_Navigation-2.9.1-purple.svg?style=flat-square)](https://kotlinlang.org/docs/multiplatform/compose-navigation-routing.html)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 A highly customizable Curved Bottom Navigation bar for Jetpack Compose, built with Kotlin Multiplatform to support both Android and iOS.
@@ -10,8 +11,11 @@ A highly customizable Curved Bottom Navigation bar for Jetpack Compose, built wi
 # Preview
 https://github.com/user-attachments/assets/2c3ca053-d97b-4195-8c4d-d97ad9871235
 
+# Caution ⚠️
+The Animation will not work properly in `low end devices` with `less GPU`, fix is coming soon
 
-# When Edge to Edge enabled
+
+# When Edge to Edge enabled - [Full Navigation Example](https://github.com/Rohit-554/compose-curved-bottombar-navigation/tree/master/composeApp/src/commonMain/kotlin/io/jadu/sample)
 - Set The surface to cover the transparent navigation bar (systemBar) with the navigation bar color
 
 
